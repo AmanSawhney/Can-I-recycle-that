@@ -75,7 +75,7 @@ class Home: UIViewController,
         view.showHUD(view)
         eventsArray.removeAllObjects()
         
-        var query = PFQuery(className: EVENTS_CLASS_NAME)
+        let query = PFQuery(className: EVENTS_CLASS_NAME)
         query.whereKey(EVENTS_LOCATION, equalTo: PFUser.currentUser()!.username!)
         query.whereKey(EVENTS_IS_PENDING, equalTo: false)
         query.orderByDescending(EVENTS_START_DATE)

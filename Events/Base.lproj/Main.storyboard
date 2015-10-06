@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="yV6-9s-mld">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="yV6-9s-mld">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--Login-->
@@ -65,7 +65,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EventCell" id="yad-dm-yjt" userLabel="EventCell" customClass="EventCell" customModule="Events" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="74" width="290" height="270"/>
+                                        <rect key="frame" x="15" y="10" width="290" height="270"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="290" height="270"/>
@@ -226,6 +226,12 @@
         <!--Submit an Event-->
         <scene sceneID="Leq-Ns-00Z">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BP6-wy-b1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xIx-cV-gfi" userLabel="TapToDismissKeyboard">
+                    <connections>
+                        <action selector="TapToDismissKeyboard:" destination="QgP-Ba-Mn3" id="K1I-1A-pNN"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <viewController storyboardIdentifier="SubmitEvent" id="QgP-Ba-Mn3" customClass="Scan" customModule="Events" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0C3-KO-RB4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1330"/>
@@ -279,11 +285,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="fyw-9T-nv4" userLabel="submitEventButt">
-                                        <rect key="frame" x="30" y="376" width="260" height="40"/>
+                                        <rect key="frame" x="30" y="1256" width="260" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.2470588235" green="0.68235294120000001" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
-                                        <state key="normal" title="SUBMIT FOR REVIEW">
+                                        <state key="normal" title="Crash Test">
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -309,12 +315,6 @@
                         <outlet property="submitEventOutlet" destination="fyw-9T-nv4" id="73k-hn-6Fh"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BP6-wy-b1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="xIx-cV-gfi" userLabel="TapToDismissKeyboard">
-                    <connections>
-                        <action selector="TapToDismissKeyboard:" destination="QgP-Ba-Mn3" id="K1I-1A-pNN"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="0.0" y="861"/>
         </scene>
@@ -685,11 +685,6 @@
         <image name="tab_submit" width="44" height="44"/>
         <image name="ticket" width="44" height="44"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="yLA-PC-BuC"/>
     </inferredMetricsTieBreakers>

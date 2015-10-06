@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>89E4D868-6E07-4A5A-994A-333420B15C3F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Events</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CF2650A1B7B47B7E3512DE0C58C115C8018DD2F4</key>
+		<string>github.com:qwefghnm/Can-I-recycle-that-.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Events.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CF2650A1B7B47B7E3512DE0C58C115C8018DD2F4</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:qwefghnm/Can-I-recycle-that-.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CF2650A1B7B47B7E3512DE0C58C115C8018DD2F4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CF2650A1B7B47B7E3512DE0C58C115C8018DD2F4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Can%20I%20recycle%20that%3F</string>
+		</dict>
+	</array>
+</dict>
+</plist>

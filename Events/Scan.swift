@@ -142,7 +142,7 @@ class Scan: UIViewController,
     // DISMISS KEYBOARD
     func dismissKeyboard() {
         //nameTxt.resignFirstResponder()
-        descriptionTxt.resignFirstResponder()
+        //.resignFirstResponder()
         //locationTxt.resignFirstResponder()
         //costTxt.resignFirstResponder()
         //websiteTxt.resignFirstResponder()

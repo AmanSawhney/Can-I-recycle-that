@@ -24,7 +24,7 @@ let SUBMISSION_EMAIL_ADDRESS = "submission@example.com"
 let CONTACT_EMAIL_ADDRESS = "amansawhney@sawhneygames.com"
 
 // EMAIL ADDRESS TO EDIT (where users can report inappropriate contents - accordingly to Apple EULA terms)
-let REPORT_EMAIL_ADDRESS = "report@example.com"
+let REPORT_EMAIL_ADDRESS = "amansawhney@sawhneygames.com"
 
 /* IMPORTANT: REPLACE THE RED STRING BELOW WITH THE UNIT ID YOU'VE GOT BY REGISTERING YOUR APP IN http://www.apps.admob.com */
 let ADMOB_UNIT_ID = "ca-app-pub-4509898719172538/7374982604"
@@ -101,6 +101,9 @@ let PARSE_CLIENT_KEY = "r9iA39psGUYXpTerXLGBMuUfsYbL0DaXPJCn5r1c"
 // ( DO NOT edit the variables below, otherwise the app won't work properly)
 
 // EVENTS CLASS
+var BARCODE_CLASS_NAME = "Barcode"
+var BARCODE_BARCODEID = "BarcodeID"
+var BARCODE_ITEM = "ItemString"
 var EVENTS_CLASS_NAME = "Events"
 var EVENTS_TITLE = "title"
 var EVENTS_DESCRIPTION = "description"

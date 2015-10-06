@@ -41,7 +41,7 @@ class SubmitEvent: UIViewController,
     var startDate = NSDate()
     var endDate = NSDate()
     var colors = ["1","2","3","4"]
-    var typeOfMaterial = ["Paper", "Plastic", "Writing Material *Twice the points!*"]
+    var typeOfMaterial = ["Paper *10 points*", "Plastic *5 points* ", "Empty a bin *50 ponts*"]
     
     
     
@@ -249,15 +249,39 @@ class SubmitEvent: UIViewController,
     
     // MARK: - SUBMIT EVENT BUTTON
     @IBAction func submitEventButt(sender: AnyObject) {
+        if eventImage.image != nil {
         view.showHUD(view)
         
         // Save event on Parse
-        var eventsClass = PFObject(className: EVENTS_CLASS_NAME)
+        let eventsClass = PFObject(className: EVENTS_CLASS_NAME)
+
         if paperOrPlastic.selectedRowInComponent(0) == 0 {
             eventsClass[EVENTS_TITLE] = "Paper"
+            
         }else  if paperOrPlastic.selectedRowInComponent(0) == 1
         {
             eventsClass[EVENTS_TITLE] = "Plastic"
+            let query = PFQuery(className: "User")
+            query.whereKey("username", equalTo: (PFUser.currentUser()?.username)!)
+            query.limit = limitForRecentEventsQuery
+            query.findObjectsInBackgroundWithBlock { (objects, error)-> Void in
+                if error == nil {
+                    if let objects = objects as? [PFObject] {
+                        for object in objects {
+                            var score = object.objectForKey("score") as! Int
+                            score += 10
+                            PFObject(className: "User")["score"] = score
+                            PFObject(className: "User").saveInBackgroundWithBlock { (success, error) -> Void in
+                                if error == nil {
+                                    self.view.hideHUD()
+                                    //self.openMailVC()
+                                    
+                                } else {   self.view.hideHUD()  }
+                            }
+
+                            
+                        }}}}
+
         }else {
             eventsClass[EVENTS_TITLE] = "Writing Material"
 
@@ -317,6 +341,14 @@ class SubmitEvent: UIViewController,
                 //self.openMailVC()
                 
             } else {   self.view.hideHUD()  }
+        }
+        } else {
+                        let alert = UIAlertView(title: "No image no save",
+                            message: "Your Submition doesnt contian an image so it will not be saved",
+                            delegate: nil,
+                            cancelButtonTitle: "SSSOOOOOWWWWWYYYY")
+                        alert.show()
+
         }
         
     }
