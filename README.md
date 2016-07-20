@@ -1,5 +1,5 @@
 <h1>Unfortunately due to poor adoption and due to Parse shutting down its server, this project has been retired. </h1>
-
+<h4>Note: qwefghnm was my old account, it has been replaced by this account as that account was hacked and resulted in vulgar things that I would rather not be associated with </h4>
 <h1>The Herricks High School Recycling App </h1>
 
 <h2> The Problems </h2>
